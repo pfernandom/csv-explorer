@@ -1,0 +1,116 @@
+:root {
+  --max-width-dashboard: 100%;
+}
+.dashboard {
+  margin-left: 1em;
+}
+
+.file-name-title {
+  max-width: var(--max-width-dashboard);
+}
+
+.csv-contents {
+  text-align: initial;
+  overflow-x: scroll;
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: #272936;
+
+  max-width: var(--max-width-dashboard);
+}
+
+table.file-data {
+  text-align: initial;
+  border: 0.5px solid grey;
+  border-radius: 3px;
+  background-color: grey;
+  width: var(--max-width-dashboard);
+}
+
+table.file-data tr {
+  display: grid;
+  grid-template-columns: 60% auto;
+}
+
+table.file-data td {
+  padding: 0.5em;
+  border-left: 0.5px solid grey;
+  border-top: 0.5px solid grey;
+  border-radius: 3px;
+  background-color: #292936;
+  margin: 0;
+}
+
+.file-data__field-list {
+  border: 1px solid grey;
+  margin: 0;
+  padding: 0.1em;
+  max-width: var(--max-width-dashboard);
+
+  overflow: scroll;
+  scrollbar-color: red orange;
+  scrollbar-width: thin;
+
+  max-height: 200px;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.file-data__field-list li {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.file-data__field-list li::before {
+  content: "●";
+  margin-left: 0.2em;
+  margin-right: 0.5em;
+}
+.file-data__field-list td:first-of-type {
+  max-width: 50%;
+}
+
+.file-data__parsed-table {
+  max-width: var(--max-width-dashboard);
+  overflow-x: scroll;
+}
+
+.file-data__parsed-table table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  background-color: #131313;
+}
+
+.file-data__parsed-table td {
+  border: 2px solid #363636;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+
+.file-data__parsed-table tr:first-of-type td {
+  background-color: #131313;
+  font-weight: 600;
+}
+.file-data__parsed-table tr:first-of-type .file-data__field {
+  resize: horizontal;
+  overflow: auto;
+  padding: 0;
+  display: block;
+  height: 100%;
+  text-align: center;
+}
+
+.file-data__field {
+  border: 0;
+  width: auto;
+  height: auto;
+  min-height: 20px;
+  min-width: 50px;
+  margin: 5px;
+  word-wrap: break-word;
+}
